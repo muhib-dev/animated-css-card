@@ -1,0 +1,16 @@
+@mixin letter-spacing($space) {
+  letter-spacing: $space;
+}
+
+// [668px, 1024px, 1400px]
+$breakpoints-down: (
+  "small": "41.75rem",
+  "medium": "64rem",
+  "large": "87.5rem",
+);
+
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($breakpoints-down, $size)) {
+    @content;
+  }
+}

@@ -1,0 +1,226 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "sourcesanspro";
+  src: url(../fonts/sourcesanspro-light.ttf);
+}
+@font-face {
+  font-family: "AileronBold";
+  src: url(../fonts/Aileron-Black.otf);
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AileronLight";
+  src: url(../fonts/Aileron-Light.otf);
+  font-weight: 500;
+  font-style: normal;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.page-btn {
+  background-color: rgb(48, 59, 81);
+  border-radius: 0.3rem;
+  position: fixed;
+  top: 1rem;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.4rem 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  z-index: 999;
+  font-family: sourcesanspro, Arial, Helvetica, sans-serif;
+}
+
+html {
+  font-size: 100%;
+}
+@media (max-width: 41.75rem) {
+  html {
+    font-size: 80%;
+  }
+}
+
+.container {
+  font-family: sourcesanspro, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, rgb(186, 144, 170) 0%, rgb(92, 121, 201) 100%);
+}
+@media (max-width: 41.75rem) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+.card {
+  background-color: #303b51;
+  border-radius: 0.5rem;
+  padding: 4rem 3.5rem;
+  text-align: center;
+  max-width: 650px;
+  line-height: 2;
+  z-index: 99;
+}
+@media (max-width: 41.75rem) {
+  .card {
+    padding: 2rem 2rem;
+  }
+}
+.card .card-title {
+  color: #cdd0d6;
+  font-size: 2rem;
+  letter-spacing: 0.6rem;
+  padding-bottom: 2.5rem;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid #4c566a;
+}
+@media (max-width: 41.75rem) {
+  .card .card-title {
+    padding-bottom: 1.9rem;
+    margin-bottom: 1.8rem;
+  }
+}
+.card .card-text {
+  color: #a4a9b6;
+  font-size: 1.1rem;
+  letter-spacing: 0.4rem;
+  margin-bottom: 3rem;
+}
+.card .card-footer {
+  padding: 0.5rem 0;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.social-links a {
+  text-decoration: none;
+  border-radius: 50%;
+  color: #fff;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 280ms ease-in-out;
+}
+.social-links a.bg-twitter {
+  background-color: #69b7cf;
+}
+.social-links a.bg-twitter:hover {
+  background-color: #fff;
+  color: #69b7cf;
+}
+.social-links a.bg-facebook {
+  background-color: #7492d2;
+}
+.social-links a.bg-facebook:hover {
+  background-color: #fff;
+  color: #7492d2;
+}
+.social-links a.bg-phone {
+  background-color: #89bf93;
+}
+.social-links a.bg-phone:hover {
+  background-color: #fff;
+  color: #89bf93;
+}
+.social-links a.bg-mail {
+  background-color: #c289a4;
+}
+.social-links a.bg-mail:hover {
+  background-color: #fff;
+  color: #c289a4;
+}
+
+.animation-boxes {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.animation-boxes li {
+  list-style-type: none;
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.2);
+  animation: animate 25s linear infinite;
+  top: -100px;
+}
+.animation-boxes li:nth-child(1) {
+  left: 25%;
+  animation-delay: 0s;
+}
+.animation-boxes li:nth-child(2) {
+  left: 10%;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+.animation-boxes li:nth-child(3) {
+  left: 70%;
+  animation-delay: 4s;
+}
+.animation-boxes li:nth-child(4) {
+  left: 40%;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+.animation-boxes li:nth-child(5) {
+  left: 65%;
+  animation-delay: 0s;
+}
+.animation-boxes li:nth-child(6) {
+  left: 75%;
+  animation-delay: 3s;
+}
+.animation-boxes li:nth-child(7) {
+  left: 35%;
+  animation-delay: 7s;
+}
+.animation-boxes li:nth-child(8) {
+  left: 50%;
+  animation-delay: 15s;
+  animation-duration: 45s;
+}
+.animation-boxes li:nth-child(9) {
+  left: 20%;
+  animation-delay: 2s;
+  animation-duration: 35s;
+}
+.animation-boxes li:nth-child(10) {
+  left: 85%;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(900px);
+    opacity: 0;
+  }
+}/*# sourceMappingURL=card1.css.map */

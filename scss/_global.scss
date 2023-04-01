@@ -1,0 +1,41 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "sourcesanspro";
+  src: url(../fonts/sourcesanspro-light.ttf);
+}
+@font-face {
+  font-family: "AileronBold";
+  src: url(../fonts/Aileron-Black.otf);
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AileronLight";
+  src: url(../fonts/Aileron-Light.otf);
+  font-weight: 500;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.page-btn {
+  background-color: rgb(48, 59, 81);
+  border-radius: 0.3rem;
+  position: fixed;
+  top: 1rem;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.4rem 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  z-index: 999;
+  font-family: sourcesanspro, Arial, Helvetica, sans-serif;
+}

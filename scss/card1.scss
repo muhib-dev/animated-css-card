@@ -1,0 +1,205 @@
+@charset 'utf-8';
+
+@import "mixins";
+@import "global";
+
+$twitter-color: #69b7cf;
+$facebook-color: #7492d2;
+$phone-color: #89bf93;
+$mail-color: #c289a4;
+$bg-gradient-color: linear-gradient(
+  90deg,
+  rgba(186, 144, 170, 1) 0%,
+  rgba(92, 121, 201, 1) 100%
+);
+
+html {
+  font-size: 100%;
+  @include breakpoint-down(small) {
+    font-size: 80%;
+  }
+}
+
+.container {
+  font-family: sourcesanspro, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $bg-gradient-color;
+  @include breakpoint-down(small) {
+    padding: 0 1.5rem;
+  }
+}
+
+.card {
+  background-color: #303b51;
+  border-radius: 0.5rem;
+  padding: 4rem 3.5rem;
+  text-align: center;
+  max-width: 650px;
+  line-height: 2;
+  z-index: 99;
+  @include breakpoint-down(small) {
+    padding: 2rem 2rem;
+  }
+
+  .card-title {
+    color: #cdd0d6;
+    font-size: 2rem;
+    @include letter-spacing(0.6rem);
+    padding-bottom: 2.5rem;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #4c566a;
+    @include breakpoint-down(small) {
+      padding-bottom: 1.9rem;
+      margin-bottom: 1.8rem;
+    }
+  }
+  .card-text {
+    color: #a4a9b6;
+    font-size: 1.1rem;
+    @include letter-spacing(0.4rem);
+    margin-bottom: 3rem;
+  }
+  .card-footer {
+    padding: 0.5rem 0;
+  }
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  a {
+    text-decoration: none;
+    border-radius: 50%;
+    color: #fff;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 280ms ease-in-out;
+  }
+  a.bg-twitter {
+    background-color: $twitter-color;
+    &:hover {
+      background-color: #fff;
+      color: $twitter-color;
+    }
+  }
+  a.bg-facebook {
+    background-color: $facebook-color;
+    &:hover {
+      background-color: #fff;
+      color: $facebook-color;
+    }
+  }
+  a.bg-phone {
+    background-color: $phone-color;
+    &:hover {
+      background-color: #fff;
+      color: $phone-color;
+    }
+  }
+  a.bg-mail {
+    background-color: $mail-color;
+    &:hover {
+      background-color: #fff;
+      color: $mail-color;
+    }
+  }
+}
+
+.animation-boxes {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  li {
+    list-style-type: none;
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    top: -100px;
+
+    &:nth-child(1) {
+      left: 25%;
+      animation-delay: 0s;
+    }
+
+    &:nth-child(2) {
+      left: 10%;
+      animation-delay: 2s;
+      animation-duration: 12s;
+    }
+
+    &:nth-child(3) {
+      left: 70%;
+      animation-delay: 4s;
+    }
+
+    &:nth-child(4) {
+      left: 40%;
+      animation-delay: 0s;
+      animation-duration: 18s;
+    }
+
+    &:nth-child(5) {
+      left: 65%;
+      animation-delay: 0s;
+    }
+
+    &:nth-child(6) {
+      left: 75%;
+      animation-delay: 3s;
+    }
+
+    &:nth-child(7) {
+      left: 35%;
+      animation-delay: 7s;
+    }
+
+    &:nth-child(8) {
+      left: 50%;
+      animation-delay: 15s;
+      animation-duration: 45s;
+    }
+
+    &:nth-child(9) {
+      left: 20%;
+      animation-delay: 2s;
+      animation-duration: 35s;
+    }
+
+    &:nth-child(10) {
+      left: 85%;
+      animation-delay: 0s;
+      animation-duration: 11s;
+    }
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(900px);
+    opacity: 0;
+  }
+}
